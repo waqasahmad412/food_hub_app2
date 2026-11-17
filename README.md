@@ -1,33 +1,53 @@
-# My Flutter App
+# 🍔 Food Hub - Food Delivery & Ordering App
 
-A new Flutter project - Counter App example.
+A modern, full-featured food delivery and restaurant ordering mobile application built with **Flutter** and **Dart**. Food Hub provides a seamless user experience from browsing local restaurants to managing carts, placing orders, and tracking order histories.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Key Features
 
-A few resources to get you started if this is your first Flutter project:
+- **🔐 User Authentication:** Secure login and registration screens for personalized user access[cite: 3].
+- **🏠 Dynamic Home & Restaurant Discovery:** Browse featured restaurants, menus, and food items with an intuitive UI[cite: 3].
+- **🛒 Smart Cart Management:** Add, update, or remove items dynamically using `Provider` state management[cite: 3].
+- **💳 Smooth Checkout Flow:** Easy checkout process with order summary and confirmation[cite: 3].
+- **📦 Order History & Details:** View active and past orders along with complete itemized breakdowns[cite: 3].
+- **➕ Post / Item Management:** Dedicated screen to add new food posts or listings directly within the app[cite: 3].
+- **👤 User Profile & Navigation:** Clean bottom navigation shell (`main_shell`) for effortless switching between Home, Cart, Orders, and Profile[cite: 3].
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack & Architecture
 
-## Running the app
+- **Framework:** Flutter (Cross-platform: Android, iOS, Web)[cite: 3]
+- **Language:** Dart[cite: 3]
+- **State Management:** Provider (`cart_provider.dart`)[cite: 3]
+- **Architecture:** Clean MVC / Feature-based folder separation (`models`, `providers`, `screens`, `data`)[cite: 3]
 
-```bash
-flutter run
-```
+---
 
-## Project Structure
+## 📁 Project Structure
 
-```
-my_app/
+```text
+food_hub_app/
+├── assets/                     # App images, icons, and static assets[cite: 3]
 ├── lib/
-│   └── main.dart          # Main app file
-├── test/                  # Unit tests
-├── assets/                # Images, fonts, etc.
-└── pubspec.yaml           # Project dependencies
-```
+│   ├── data/                   # Mock datasets & local data sources[cite: 3]
+│   ├── models/                 # Data models (CartItem, Order, Restaurant)[cite: 3]
+│   │   ├── cart_item_model.dart[cite: 3]
+│   │   ├── order_model.dart[cite: 3]
+│   │   └── restaurant_model.dart[cite: 3]
+│   ├── providers/              # State management logic[cite: 3]
+│   │   └── cart_provider.dart[cite: 3]
+│   ├── screens/                # UI Screens[cite: 3]
+│   │   ├── auth/               # Authentication screens (Login/Signup)[cite: 3]
+│   │   ├── add_post_screen.dart[cite: 3]
+│   │   ├── cart_screen.dart[cite: 3]
+│   │   ├── checkout_screen.dart[cite: 3]
+│   │   ├── home_screen.dart[cite: 3]
+│   │   ├── main_shell.dart[cite: 3]
+│   │   ├── order_details_screen.dart[cite: 3]
+│   │   ├── orders_screen.dart[cite: 3]
+│   │   └── profile_screen.dart[cite: 3]
+│   └── main.dart                 # Application entry point
+├── test/                       # Unit and widget tests[cite: 3]
+└── pubspec.yaml                # Project dependencies and asset configurations
